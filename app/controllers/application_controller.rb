@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-    private
+  private
 
   def require_signin
     redirect_to signin_path, alert: 'Please sign in first!' unless current_user
@@ -10,4 +10,4 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_user
-  end
+end
