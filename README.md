@@ -6,6 +6,9 @@ In this project, I built a site similar to a private Eventbrite which allows use
 
 A user can create events. A user can attend many events. An event can be attended by many users. I modelled many-to-many relationships and also conscious about foreign keys and class names. Scopes are utilized to show upcoming/past events.
 
+## Live Link
+The app is deployed to [heroku](https://kyle-private-events.herokuapp.com/)
+
 ![image](https://user-images.githubusercontent.com/55923773/80930235-c2e3f280-8de4-11ea-8e2d-7dd29119fbdb.png)
 <small><small><center>root page</center></small></small>
 
