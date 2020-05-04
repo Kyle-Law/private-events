@@ -1,0 +1,43 @@
+<section class="user">
+    <h1><%= @user.username %></h1>
+    <h3>Member Since</h3>
+    <p>
+        <%= @user.created_at.strftime("%B %Y") %>
+    </p>
+      <% if @events.present? %>
+        <h3>Created <%= pluralize(@events.size, "Event") %></h3>
+        <% if @events.present? %>
+          <div class="created-events">
+            <ul>
+                <% @events.each do |e| %>
+                  <li>
+                    <%= link_to e.title, e %>
+                  </li>
+                <% end %>
+            </ul>
+          </div>
+        <% end %>
+      <% end %>
+      <% if @registrations.present? %>
+        <h3>Attending <%= pluralize(@upcoming_events.size, "Event") %></h3>
+        <div class="attending-events">
+          <ul>
+            <% @upcoming_events.each do |r| %>
+              <li>
+                <%= link_to r.event.title, r.event %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+        <h3>Attended <%= pluralize(@prev_events.size, "Event") %></h3>
+        <div class="attending-events">
+          <ul>
+            <% @prev_events.each do |r| %>
+              <li>
+                <%= link_to r.event.title, r.event %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+</section>
