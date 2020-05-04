@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# rubocop:disable Metrics/LineLength, Style/StringLiterals
+# rubocop:disable Metrics/LineLength
 
 User.create!([
                { username: 'Kyle' },
@@ -130,4 +130,4 @@ Registration.create!([
                        { event_id: 4, user_id: 1 },
                        { event_id: 4, user_id: 5 }
                      ])
-# rubocop:enable Metrics/LineLength, Style/StringLiterals
+# rubocop:enable Metrics/LineLength
