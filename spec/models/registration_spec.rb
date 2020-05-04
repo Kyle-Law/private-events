@@ -1,5 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Registration, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe Registration, 'associations' do
+  it { should belong_to :user }
+  it { should belong_to :event }
 end
