@@ -1,0 +1,27 @@
+<section class="event-details">
+  <div class="details">
+    <h1><%= @event.title %></h1>
+    <h5>
+      <%= @event.date.strftime("%d %B %Y") %>
+    </h3>
+    <p>
+      Created by 
+      <strong><%= link_to @event.creator.username, user_path(@event.creator.id) %></strong>,
+      <%= time_ago_in_words(@event.created_at) %> ago<%= %> 
+    </p>
+    <p>
+      <%= @event.description %>
+    </p>
+    <%= registration_button(@event, @registration) %>
+    <aside>
+      <h2><%= pluralize(@registrations.size, "Attendee") %></h2>
+      <ul>
+        <% @registrations.each do |r|%>
+          <li>
+            <%= link_to r.user.username,  user_path(r.user.id)%>
+          </li>
+        <%end%>
+      </ul>
+    </aside>
+  </div>
+</section>
