@@ -1,0 +1,83 @@
+@import "bootstrap";
+
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 20px;
+
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    font-size: 12px;
+    text-align: right;
+    padding: 10px;
+}
+
+nav img{
+    width: 100px;
+    height: 84px;
+}
+
+.content {
+    padding: 20px;;
+}
+
+// Flashes
+
+.flash {
+	@extend .alert;
+	text-align: center;
+	margin-top: -1rem;
+	margin-bottom: 2rem;
+
+  &.notice {
+		@extend .alert-success;
+  }
+
+  &.alert {
+		@extend .alert-danger;
+  }
+
+  &.danger {
+    background-color: #FFA715;
+  }
+}
+
+// Errors
+
+section.errors {
+  margin: 1rem 0;
+	padding: 1.5rem;
+	border-radius: 0.3rem;
+  background: lightgreen;
+
+  h2 {
+    color: red;
+    font-size: 1.25rem;
+  }
+
+  h3 {
+		font-size: 1rem;
+		margin-top: 1rem;
+		font-weight: 600;
+  }
+}
