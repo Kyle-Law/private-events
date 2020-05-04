@@ -1,1 +1,25 @@
-<%= link_to 'Sign In', path %>
+
+<h1><%= @title %></h1>
+
+<% @events.each do |event| %>
+  <section class="event">
+    <div class="summary">
+      <h2>
+        <%= link_to event.title, event_path(event) %>
+      </h2>
+      <h5>
+        <%= event.date.strftime("%d %B %Y") %>
+      </h3>
+      <p>
+        <%= truncate(event.description, length: 150, separator: ' ') %>
+      </p>
+      <p>
+        Created by 
+        <strong><%= link_to event.creator.username, user_path(event.creator.id) %></strong>,
+        <%= time_ago_in_words(event.created_at) %> ago<%= %> 
+      </p>
+
+    </div>
+  </section>
+<% end %>
+
