@@ -51,6 +51,11 @@ Click [here](https://kyle-private-events.herokuapp.com/) for the live link :)
         └── events_controller.rb
 
 ```
+## Testing
+1) Clone the project and cd to private-events
+2) Run `yarn install --check-files` to check and update yarn packages
+3) Run 'rspec'
+4) 17 examples, 0 failures should be shown. 
 
 ## Deployment
 1) Git clone this repo and cd the to the `private-events` directory.
@@ -81,11 +86,7 @@ Click [here](https://kyle-private-events.herokuapp.com/) for the live link :)
 2) Validations are as followed: title cannot be blank, description length > 20, date cannot be blank. Enter them and click 'Create Event'.
 3) Viola! The post is shown at the root page.
 
-## Testing
-1) Clone the project and cd to private-events
-2) Run `yarn install --check-files` to check and update yarn packages
-3) Run 'rspec'
-4) 17 examples, 0 failures should be shown. 
+
 
 
 ## Authors
