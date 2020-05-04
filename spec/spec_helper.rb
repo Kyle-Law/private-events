@@ -28,9 +28,9 @@ RSpec.configure do |config|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
 
     # Uncomment below to seed data before testing
-    # config.before(:suite) do
-    #   Rails.application.load_seed # loading seeds
-    # end
+    config.before(:suite) do
+      Rails.application.load_seed # loading seeds
+    end
   end
 
   # rspec-mocks config goes here. You can use an alternate test double
