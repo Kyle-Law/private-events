@@ -82,10 +82,10 @@ Click [here](https://kyle-private-events.herokuapp.com/) for the live link :)
 3) Viola! The post is shown at the root page.
 
 ## Testing
-1) Testing Specs are written for main features, associations, and validations.
-2) Controllers and Instances method test are included in Features test.
-3) run `rspec`.
-4) 17 examples, 0 failures would be shown.
+1) Clone the project and cd to private-events
+2) Run `yarn install --check-files` to check and update yarn packages
+3) Run 'rspec'
+4) 17 examples, 0 failures should be shown. 
 
 
 ## Authors
