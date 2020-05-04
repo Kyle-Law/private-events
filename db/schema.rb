@@ -10,34 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_02_151540) do
-
-  create_table "events", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.date "date"
-    t.integer "creator_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["creator_id"], name: "index_events_on_creator_id"
+ActiveRecord::Schema.define(version: 20_200_502_151_540) do
+  create_table 'events', force: :cascade do |t|
+    t.string 'title'
+    t.text 'description'
+    t.date 'date'
+    t.integer 'creator_id'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.index ['creator_id'], name: 'index_events_on_creator_id'
   end
 
-  create_table "registrations", force: :cascade do |t|
-    t.integer "event_id", null: false
-    t.integer "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["event_id"], name: "index_registrations_on_event_id"
-    t.index ["user_id"], name: "index_registrations_on_user_id"
+  create_table 'registrations', force: :cascade do |t|
+    t.integer 'event_id', null: false
+    t.integer 'user_id', null: false
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.index ['event_id'], name: 'index_registrations_on_event_id'
+    t.index ['user_id'], name: 'index_registrations_on_user_id'
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'users', force: :cascade do |t|
+    t.string 'username'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  add_foreign_key "events", "users", column: "creator_id"
-  add_foreign_key "registrations", "events"
-  add_foreign_key "registrations", "users"
+  add_foreign_key 'events', 'users', column: 'creator_id'
+  add_foreign_key 'registrations', 'events'
+  add_foreign_key 'registrations', 'users'
 end
