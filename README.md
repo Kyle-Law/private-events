@@ -15,7 +15,6 @@ Click [here](https://kyle-private-events.herokuapp.com/) for the live link :)
 
 
 ## Built With
-
 - Ruby
 - Ruby on Rails
 - RSpec
