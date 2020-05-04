@@ -4,7 +4,7 @@
 
 In this project, I built a site similar to a private Eventbrite which allows users to create events and then manage user signups.
 
-A user can create events. A user can attend many events. An event can be attended by many users. I modelled many-to-many relationships and also conscious about foreign keys and class names. Scopes are utilized to show upcoming/past events.
+A user can create events. A user can attend many events. An event can be attended by many users. I modeled many-to-many relationships and also conscious of foreign keys and class names. Scopes are utilized to show upcoming/past events.
 
 ## Live Link
 Click [here](https://kyle-private-events.herokuapp.com/) for the live link :)
